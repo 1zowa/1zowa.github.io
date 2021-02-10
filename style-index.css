@@ -3,13 +3,14 @@
     margin: 0;
 }
 body {
+    width: 100%;
     background-image: url("img/120-1209522_mars.jpg"),
-    url("img/unnamed1.jpg"),
     url("img/footer.jpg");
     background-repeat: no-repeat;
-    background-size: 1903px 900px, 1903px 1260px, 1903px 860px;
+    background-size: 100% 900px, 100% 860px;
     font-family: 'Montserrat', monospace, sans-serif;
-    background-position: 0 0, 0 2950px, 0 100%;
+    background-position: 0 0, 0 100%;
+    box-sizing: border-box;
 }
 iframe{
     background-image: url("img/preview-1.jpg");
@@ -20,11 +21,15 @@ iframe.bad-video {
 img.bad-video {
     margin-left: 147px;
 }
+.section {
+    padding: 0 235px;
+}
 .header {
     display: flex;
-    width: 1668px;
+    width: 100%;
     padding-left: 235px;
     padding-top: 100px;
+    box-sizing: border-box;
 }
 .header a {
     width: 180px;
@@ -32,28 +37,34 @@ img.bad-video {
 }
 .content {
     display: flex;
-    width: 1433px;
+    width: 100%;
     flex-wrap: wrap;
-    padding-left: 235px;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    /* padding-left: 235px; */
 }
 /*---------- PROMO ------------------- */
 .header__promo {
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    width: 1433px;
+    justify-content: center;
+    width: 100%;
     height: 750px;
 }
 .hidden {
     display: none;
 }
 .header__promo h2 {
+    width: 100%;
     font-style: normal;
     text-align: center;
-    margin-top: 60px;
     color: white;
     font-weight: 100;
     font-size: 50px;
+}
+.header__promo img {
+    /* margin: 0 auto; */
 }
 .panteon-text {
     width: .7em;
@@ -89,8 +100,10 @@ img.bad-video {
     margin-left: 60px;
 }
 .header__promo .video {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 80px;
-    margin-left: 436px;
     padding-top: 0px;
     width: 546px;
     height: 273px;
@@ -179,29 +192,30 @@ img.bad-video {
     left: 73%;
 }
 .video-description:hover {
-    /* animation-name: trans;
-    animation-duration: 2s;
-    animation-fill-mode: forwards; */
     left: 73%;
     transition: left 2s;
 }
 /*---------- PROMO ------------------- */
 /*---------- FACTS ------------------- */
-.contents_facts {
+.content__facts {
     display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 140px;
 }
-.facts-list {
+ul.facts-list {
     display: flex;
-    width: 1433px;
+    width: 100%;
     flex-direction: row;
+    justify-content: space-around;
     min-height: 300px;
-    justify-content: space-between;
+    
 }
 .list-item {
     display: flex;
     flex-direction: column;
     margin-top: 55px;
-    width: 120px;
+    width: 200px;
 }
 .red-number {
     color: #ea2658;
@@ -230,7 +244,7 @@ img.bad-video {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 1433px;
+    width: 100%;
     margin-bottom: 150px;
 }
 .about-mars-list {
@@ -423,6 +437,10 @@ img.bad-video {
     position: relative;
     padding-top: 100px;
     padding-bottom: 166px;
+    width: 100%;
+    background-image: url("img/unnamed1.jpg");
+    background-size: 100% 1278px;
+    box-sizing: border-box;
 }
 .title-white {
     color: white;
@@ -469,17 +487,28 @@ img.bad-video {
 /*---------- BAD THINGS ------------------- */
 /*---------- LIVE-IN MARS ------------------- */
 .content__live-in-mars {
-    padding-top: 5px;
-    padding-left: 144px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     padding-bottom: 95px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 .content__live-in-mars .content__title {
+    width: 100%;
+    margin-top: 100px ;
     margin-bottom: 65px;
+    text-align: center;
 }
-.content__live-in-mars img {
-    margin-bottom: 45px;
+.content__live-in-mars .elon-mask{
+    display: block;
+    margin: 0 auto;
+}
+.elon-mask img {
+    margin-bottom: 80px;
 }
 .content__live-in-mars p {
+    display: block;
     width: 950px;
     line-height: 35px;
     margin-bottom: 80px;
@@ -509,6 +538,8 @@ img.bad-video {
 .last-block h2 {
     order: -4;
     height: 100px;
+    width: 100%;
+    text-align: center;
 }
 .last-block form {
     display: flex;
@@ -522,6 +553,10 @@ img.bad-video {
     background-size: 1000px 610px;
     background-repeat: no-repeat;
     background-position: 0px;
+}
+.center {
+    display: flex;
+    margin: 0 auto;
 }
 .last-block form p {
     color: white;
@@ -600,6 +635,7 @@ img.bad-video {
 }
 .footer {
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: space-around;
 }
