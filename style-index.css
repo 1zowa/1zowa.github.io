@@ -11,6 +11,15 @@ body {
     font-family: 'Montserrat', monospace, sans-serif;
     background-position: 0 0, 0 2950px, 0 100%;
 }
+iframe{
+    background-image: url("img/preview-1.jpg");
+}
+iframe.bad-video {
+    margin-left: 147px;
+}
+img.bad-video {
+    margin-left: 147px;
+}
 .header {
     display: flex;
     width: 1668px;

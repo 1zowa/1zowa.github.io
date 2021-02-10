@@ -1,30 +1,36 @@
-var videoPlay = document.querySelector("video");
+var videoPlay = document.querySelector("iframe");
+var image = document.querySelector("img.video");
 var button = document.querySelector(".promo-btn");
 var newVideo = document.querySelector("iframe");
 var description = document.querySelector(".video-description");
 var header = document.querySelector(".header-logo");
 var input = document.querySelector(".content__flyight-price input")
 var message = document.querySelector(".message");
-console.log(message);
+var src = "https://www.youtube.com/embed/w6nUVp9mQDs?autoplay=1&mute=0";
+console.log(image);
 
 header.addEventListener('click', function(evt) {
     evt.preventDefault();
 });
 
 button.addEventListener('click', function() {
-    videoPlay.removeAttribute("poster");
+    // videoPlay.removeAttribute("poster");
     button.classList.add("hidden");
-    videoPlay.classList.remove("video");
-    videoPlay.classList.add("video-play");
-    videoPlay.setAttribute("controls", "controls");
-    videoPlay.play();
+    image.classList.add("hidden");
+    videoPlay.src = src;
+    videoPlay.classList.remove("hidden");
+
+    // videoPlay.classList.remove("video");
+    // videoPlay.classList.add("video-play");
+    // videoPlay.setAttribute("controls", "controls");
+    // videoPlay.play();
     description.classList.add("video-description-3");
 });
 
-videoPlay.addEventListener('mouseover', function(){
+image.addEventListener('mouseover', function(){
     description.classList.add("video-description-2");
 });
-videoPlay.addEventListener('mouseout', function() {
+image.addEventListener('mouseout', function() {
     description.classList.remove("video-description-2");
 });
 button.addEventListener('mouseover', function(){
@@ -36,13 +42,13 @@ button.addEventListener('mouseout', function() {
 
 var badVideo = document.querySelector(".bad-video");
 var badBtn = document.querySelector(".bad-btn");
+var badframe = document.querySelector("iframe.bad-video");
+var badsrc = "https://www.youtube.com/embed/x8fpeVICeGg?autoplay=1&mute=0";
 badBtn.addEventListener('click', function() {
-    badVideo.removeAttribute("poster");
     badBtn.classList.add("hidden");
-    badVideo.classList.remove("video");
-    badVideo.classList.add("setting");
-    badVideo.setAttribute("controls", "controls");
-    badVideo.play();
+    badVideo.classList.add("hidden");
+    badframe.src = badsrc;
+    badframe.classList.remove("hidden");
 });
 
 input.addEventListener('mouseover', function(evt) {
